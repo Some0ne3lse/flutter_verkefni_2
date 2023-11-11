@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_verkefni_2/summary_extras/big_button.dart';
+import 'package:flutter_verkefni_2/buttons/big_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
