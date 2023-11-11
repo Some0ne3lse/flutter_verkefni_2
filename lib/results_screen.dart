@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_verkefni_2/data/questions.dart';
 import 'package:flutter_verkefni_2/questions_summary.dart';
-import 'package:flutter_verkefni_2/return_button.dart';
+import 'package:flutter_verkefni_2/summary_extras/big_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
@@ -47,8 +47,8 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly',
-              style: GoogleFonts.oswald(
-                color: const Color.fromARGB(255, 183, 165, 255),
+              style: GoogleFonts.playfairDisplay(
+                color: const Color.fromARGB(255, 246, 221, 221),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -61,7 +61,11 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            ReturnButton(returnText: 'Restart Quiz!', onTap: startOver),
+            BigButton(
+              icon: Icon(Icons.refresh),
+              text: 'Restart Quiz!',
+              onTap: startOver,
+            ),
           ],
         ),
       ),

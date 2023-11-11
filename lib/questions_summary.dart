@@ -10,45 +10,64 @@ class QuestionsSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 450,
-      child: SingleChildScrollView(
-        child: Column(
-          children: summaryData.map(
-            (data) {
-              return Row(
-                children: [
-                  QuestionNumber(
-                    questionNumber:
-                        ((data['question_index'] as int) + 1).toString(),
-                    correctOrIncorrect: (data['user_answer'] as String) ==
-                        (data['correct_answer'] as String),
-                  ),
-                  Expanded(
-                    child: Column(
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(63, 2, 156, 252),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: SizedBox(
+        height: 450,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Column(
+                children: summaryData.map(
+                  (data) {
+                    return Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        QuestionText(
-                          dataText: data['question'] as String,
-                          textColor: const Color.fromARGB(255, 255, 255, 255),
+                        QuestionNumber(
+                          questionNumber:
+                              ((data['question_index'] as int) + 1).toString(),
+                          correctOrIncorrect: (data['user_answer'] as String) ==
+                              (data['correct_answer'] as String),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        QuestionText(
-                          dataText: data['user_answer'] as String,
-                          textColor: const Color.fromARGB(255, 144, 89, 255),
-                        ),
-                        QuestionText(
-                          dataText: data['correct_answer'] as String,
-                          textColor: const Color.fromARGB(255, 19, 0, 255),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              QuestionText(
+                                dataText: data['question'] as String,
+                                textColor:
+                                    const Color.fromARGB(255, 255, 255, 255),
+                              ),
+                              const SizedBox(
+                                height: 5,
+                              ),
+                              QuestionText(
+                                dataText: data['user_answer'] as String,
+                                textColor:
+                                    const Color.fromARGB(255, 250, 199, 0),
+                              ),
+                              QuestionText(
+                                dataText: data['correct_answer'] as String,
+                                textColor: const Color.fromARGB(255, 1, 5, 185),
+                              ),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
-                    ),
-                  ),
-                ],
-              );
-            },
-          ).toList(),
+                    );
+                  },
+                ).toList(),
+              ),
+            ],
+          ),
         ),
       ),
     );

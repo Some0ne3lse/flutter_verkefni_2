@@ -13,19 +13,29 @@ class QuestionNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 40,
+      height: 40,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: correctOrIncorrect
-            ? const Color.fromARGB(255, 110, 225, 239)
-            : const Color.fromARGB(255, 252, 114, 114),
-      ),
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromARGB(178, 201, 0, 255),
+              blurRadius: 7,
+            ),
+          ],
+          color: correctOrIncorrect
+              ? const Color.fromARGB(178, 110, 225, 239)
+              : const Color.fromARGB(179, 252, 114, 114),
+          borderRadius: BorderRadius.circular(100)),
       margin: const EdgeInsets.all(20),
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Text(
-          questionNumber,
-          style: GoogleFonts.oswald(
-              color: const Color.fromARGB(255, 0, 0, 0), fontSize: 20),
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: Center(
+          child: Text(
+            questionNumber.toString(),
+            style: GoogleFonts.robotoMono(
+                color: const Color.fromARGB(255, 255, 255, 255), fontSize: 20),
+          ),
         ),
       ),
     );

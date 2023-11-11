@@ -36,8 +36,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           children: [
             Text(
               currentQuestion.text,
-              style: GoogleFonts.oswald(
-                color: const Color.fromARGB(255, 18, 0, 255),
+              style: GoogleFonts.playfairDisplay(
+                color: const Color.fromARGB(255, 246, 221, 221),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),

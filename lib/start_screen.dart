@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_verkefni_2/summary_extras/big_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
@@ -15,29 +16,25 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
-            color: const Color.fromARGB(150, 255, 255, 255),
+            color: const Color.fromARGB(128, 1, 25, 136),
           ), //CHANGE THIS
           const SizedBox(
             height: 80,
           ),
           Text(
-            'Learnig Flutter the fun way!',
-            style: GoogleFonts.oswald(
-              color: const Color.fromARGB(255, 222, 220, 253), // CHANGE THIS
+            'Learning Flutter the fun way!',
+            style: GoogleFonts.playfairDisplay(
+              color: const Color.fromARGB(255, 246, 221, 221),
               fontSize: 24,
             ),
           ),
           const SizedBox(
             height: 30,
           ),
-          ElevatedButton.icon(
-            onPressed: startQuiz,
-            style: ElevatedButton.styleFrom(
-              foregroundColor:
-                  const Color.fromARGB(255, 222, 220, 253), //CHANGE THIS
-            ),
+          BigButton(
+            text: 'Start Quiz',
+            onTap: startQuiz,
             icon: const Icon(Icons.arrow_right_alt),
-            label: const Text('Start Quiz'),
           ),
         ],
       ),

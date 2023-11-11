@@ -12,12 +12,15 @@ class QuestionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Text(
-        dataText,
-        style: GoogleFonts.oswald(
-          color: textColor,
-          fontSize: 15,
-          fontWeight: FontWeight.bold,
+      child: Padding(
+        padding: const EdgeInsets.only(right: 8.0),
+        child: Text(
+          dataText,
+          style: GoogleFonts.playfairDisplay(
+            color: textColor,
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
