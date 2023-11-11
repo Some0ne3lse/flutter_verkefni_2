@@ -62,7 +62,7 @@ class ResultsScreen extends StatelessWidget {
               height: 30,
             ),
             BigButton(
-              icon: Icon(Icons.refresh),
+              icon: const Icon(Icons.refresh),
               text: 'Restart Quiz!',
               onTap: startOver,
             ),

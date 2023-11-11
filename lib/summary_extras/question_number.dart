@@ -17,7 +17,7 @@ class QuestionNumber extends StatelessWidget {
       height: 40,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromARGB(178, 201, 0, 255),
               blurRadius: 7,

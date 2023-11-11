@@ -11,8 +11,7 @@ class BigButton extends StatelessWidget {
 
   final String text;
   final void Function() onTap;
-  // final double width;
-  final Icon? icon;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class BigButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (icon != null) icon!,
+            icon,
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
