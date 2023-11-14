@@ -1,16 +1,17 @@
 # flutter_verkefni_2
 
-A new Flutter project.
+Second assignment from NTV and Udemy
 
-## Getting Started
+## Changes
 
-This project is a starting point for a Flutter application.
+Changed Outlinedbutton in start_screen to Bigbutton which is the same
+kind of button used in results_screen since I found it prettier.
+Made the button a separate dart file since I use it twice.
 
-A few resources to get you started if this is your first Flutter project:
+Added decoration to questions_summary to make it look nicer.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Added own questions
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Added own version of question_number
+
+Gave Answerbutton margin to make it look nicer
